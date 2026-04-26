@@ -179,8 +179,37 @@ pkg/
 # Data Files
 # =========================
 
-input/
-output/
+# Keep input/output scaffolding, but ignore real contents
+input/*
+!input/lseg_workspace_sample/
+!input/reference/
+input/lseg_workspace_sample/*
+!input/lseg_workspace_sample/.gitkeep
+input/reference/*
+!input/reference/.gitkeep
+
+output/*
+!output/exports/
+!output/figures/
+!output/logs/
+!output/tables/
+output/exports/*
+!output/exports/001_prepare_input_data/
+!output/exports/002_regex_source_extraction/
+!output/exports/003_source_frequency_analysis/
+output/exports/001_prepare_input_data/*
+!output/exports/001_prepare_input_data/.gitkeep
+output/exports/002_regex_source_extraction/*
+!output/exports/002_regex_source_extraction/.gitkeep
+output/exports/003_source_frequency_analysis/*
+!output/exports/003_source_frequency_analysis/.gitkeep
+output/figures/*
+!output/figures/.gitkeep
+output/logs/*
+!output/logs/.gitkeep
+output/tables/*
+!output/tables/.gitkeep
+
 *.csv
 *.tsv
 *.xlsx
