@@ -1,0 +1,216 @@
+# =========================
+# OS / System Files
+# =========================
+
+.DS_Store
+.DS_Store?
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Spotlight-V100/
+.Trashes/
+._*
+
+
+# =========================
+# IDE / Editor Files
+# =========================
+
+.vscode/
+.idea/
+*.iml
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+*.swp
+*.swo
+*~
+
+
+# =========================
+# Logs & Runtime Files
+# =========================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.seed
+*.out
+*.err
+*.stackdump
+
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+*.env
+*.local
+*.secret
+*.key
+*.pem
+
+
+# =========================
+# Archives & Compressed Files
+# =========================
+
+*.7z
+*.gz
+*.zip
+*.tar
+*.tgz
+*.bz2
+*.rar
+
+
+# =========================
+# Python
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing / coverage
+.coverage
+.coverage.*
+.cache/
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+
+
+# =========================
+# Node / JavaScript
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Build outputs
+dist/
+build/
+.next/
+.nuxt/
+out/
+
+
+# =========================
+# Frontend / Web
+# =========================
+
+.cache/
+.parcel-cache/
+.sass-cache/
+
+
+# =========================
+# Java / JVM
+# =========================
+
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+
+
+# =========================
+# C / C++ / Rust / Go
+# =========================
+
+# C/C++
+*.o
+*.obj
+*.exe
+*.out
+
+# Rust
+target/
+Cargo.lock
+
+# Go
+bin/
+pkg/
+
+
+# =========================
+# R / Data Science
+# =========================
+
+.Rhistory
+.RData
+.Rproj.user/
+
+
+# =========================
+# Data Files
+# =========================
+
+input/
+output/
+*.csv
+*.tsv
+*.xlsx
+*.parquet
+*.feather
+
+
+# =========================
+# Docker
+# =========================
+
+.dockerignore
+Dockerfile.local
+
+
+# =========================
+# Terraform
+# =========================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+
+
+# =========================
+# Misc
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*.orig
+*.swp
