@@ -37,6 +37,7 @@ if SRC_DIR not in sys.path:
 # --- Import project-specific utilities and pipeline code ---
 from project.paths import PROJECT_ROOT as PACKAGE_PROJECT_ROOT  # type: ignore
 from project.paths import ensure_project_directories  # type: ignore
+from project.env import ENV_EXAMPLE_FILE, ENV_FILE, ensure_env_file  # type: ignore
 from project.utils import print_section_header, print_stage_banner, print_status  # type: ignore
 from project.logger import capture_script_console_to_markdown  # type: ignore
 
@@ -100,6 +101,16 @@ def main() -> None:
     print_status(f"Stage 2 directory: {paths.stage_002_dir}")
     print_status(f"Stage 3 directory: {paths.stage_003_dir}")
     print_status(f"Log directory: {paths.log_dir}")
+
+    print_section_header("Environment File")
+
+    env_file_created = ensure_env_file()
+
+    if env_file_created:
+        print_status(f"Created local environment file: {ENV_FILE}")
+        print_status(f"Copied from template: {ENV_EXAMPLE_FILE}")
+    else:
+        print_status(f"Using existing local environment file: {ENV_FILE}")
 
     venv_path = os.path.join(PROJECT_ROOT, ".venv")
 

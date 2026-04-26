@@ -33,6 +33,7 @@ Settings
 """
 
 ENV_FILE = os.path.join(PROJECT_ROOT, ".env")
+ENV_EXAMPLE_FILE = os.path.join(PROJECT_ROOT, ".env.example")
 DEFAULT_RAW_REPORTS_PATH = os.path.join("input", "lseg_workspace_sample", "sample_cleaned_lseg_reports.csv")
 DEFAULT_ALTERNATIVE_SOURCES_PATH = os.path.join("input", "reference", "alternative_data_sources_sample.csv")
 
@@ -86,6 +87,27 @@ def load_dotenv_file(env_path: str = ENV_FILE) -> None:
         if key and key not in os.environ:
             # Respect any variables the caller already supplied while still honoring repo-local defaults.
             os.environ[key] = value
+
+
+def ensure_env_file(env_path: str = ENV_FILE, example_path: str = ENV_EXAMPLE_FILE) -> bool:
+    """
+    Create a local .env file from the tracked example when it is missing.
+    This helps keep first-time setup predictable without overwriting an existing local configuration.
+    """
+
+    if os.path.exists(env_path):
+        return False
+
+    if not os.path.exists(example_path):
+        raise FileNotFoundError(f"Missing required environment template: {example_path}")
+
+    with open(example_path, "r", encoding = "utf-8") as source_handle:
+        example_contents = source_handle.read()
+
+    with open(env_path, "w", encoding = "utf-8") as target_handle:
+        target_handle.write(example_contents)
+
+    return True
 
 
 def resolve_project_path(path_value: str | None, default_path: str) -> str:

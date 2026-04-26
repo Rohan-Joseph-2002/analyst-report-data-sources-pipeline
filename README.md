@@ -64,6 +64,7 @@ Primary outputs:
 ```text
 analyst-report-data-sources-pipeline/
 ├── requirements.txt
+├── .env.example
 ├── .gitignore
 ├── README.md
 ├── pyproject.toml
@@ -148,14 +149,14 @@ input/
 
 ## Setup
 
-`setup_env.py` creates the expected local directories and installs the packages listed in `requirements.txt` into the current interpreter or the local `.venv` if one exists.
+`setup_env.py` creates the expected local directories, creates a repo-local `.env` from the tracked `.env.example` template when `.env` is missing, and installs the packages listed in `requirements.txt` into the current interpreter or the local `.venv` if one exists.
 
 ```bash
 python3 scripts/setup_env.py
 python3 scripts/check_env.py
 ```
 
-This repository expects a repo-local `.env` file at the project root. The current local sample configuration is:
+The setup script will create a repo-local `.env` from `.env.example` on first run. The tracked template contains this sample configuration:
 
 ```bash
 RAW_REPORTS_PATH=input/lseg_workspace_sample/sample_cleaned_lseg_reports.csv
