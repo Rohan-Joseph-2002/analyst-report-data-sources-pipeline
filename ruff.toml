@@ -1,0 +1,18 @@
+line-length = 100
+target-version = "py311"
+
+[lint]
+# Lint-only: no autoformatter and no import-sorter. The house style hand-orders imports by
+# line length and puts spaces around keyword "=", both of which those tools would rewrite.
+select = ["E", "F", "UP", "B", "SIM", "RUF", "Q"]
+ignore = ["E251"]  # allow spaces around keyword "=" (house style)
+
+[lint.per-file-ignores]
+# Entry-point scripts add the repo root to sys.path before importing `src`, which happens
+# after `import os, sys` (E402). That is intentional for runnable scripts.
+"data/*" = ["E402"]
+"analysis/*" = ["E402"]
+"tests/*" = ["E402"]
+
+[lint.flake8-quotes]
+inline-quotes = "double"

@@ -1,246 +1,33 @@
-# =========================
-# OS / System Files
-# =========================
+# Python
+__pycache__/
+*.py[cod]
 
-.DS_Store
-.DS_Store?
-Thumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-.Spotlight-V100/
-.Trashes/
-._*
+# Virtual environment
+.venv/
 
-
-# =========================
-# IDE / Editor Files
-# =========================
-
-.vscode/
-.idea/
-*.iml
-*.suo
-*.user
-*.userossc
-*.sln.docstates
-*.swp
-*.swo
-*~
-
-
-# =========================
-# Logs & Runtime Files
-# =========================
-
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-*.pid
-*.seed
-*.out
-*.err
-*.stackdump
-
-
-# =========================
-# Environment / Secrets
-# =========================
-
+# Environment / secrets
 .env
-.env.*
-*.env
-!.env.example
-*.local
-*.secret
 *.key
 *.pem
 
+# OS
+.DS_Store
 
-# =========================
-# Archives & Compressed Files
-# =========================
+# Tooling caches
+.ruff_cache/
+.pytest_cache/
 
-*.7z
-*.gz
-*.zip
-*.tar
-*.tgz
-*.bz2
-*.rar
+# Generated outputs (keep the folder tree via .gitkeep)
+/output/**
+!/output/
+!/output/**/
+!/output/**/.gitkeep
 
+# Logs (keep the folder)
+/logs/*
+!/logs/.gitkeep
 
-# =========================
-# Python
-# =========================
-
-**pycache**/
-*.py[cod]
-*$py.class
-
-# Virtual environments
-venv/
-env/
-ENV/
-.venv/
-
-# Packaging
-build/
-dist/
-*.egg-info/
-.eggs/
-
-# Testing / coverage
-.coverage
-.coverage.*
-.cache/
-pytest_cache/
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Type checkers
-.mypy_cache/
-.pyre/
-.pytype/
-
-
-# =========================
-# Node / JavaScript
-# =========================
-
-node_modules/
-npm-debug.log*
-yarn.lock
-pnpm-lock.yaml
-
-# Build outputs
-dist/
-build/
-.next/
-.nuxt/
-out/
-
-
-# =========================
-# Frontend / Web
-# =========================
-
-.cache/
-.parcel-cache/
-.sass-cache/
-
-
-# =========================
-# Java / JVM
-# =========================
-
-*.class
-*.jar
-*.war
-*.ear
-.gradle/
-build/
-
-
-# =========================
-# C / C++ / Rust / Go
-# =========================
-
-# C/C++
-*.o
-*.obj
-*.exe
-*.out
-
-# Rust
-target/
-Cargo.lock
-
-# Go
-bin/
-pkg/
-
-
-# =========================
-# R / Data Science
-# =========================
-
-.Rhistory
-.RData
-.Rproj.user/
-
-
-# =========================
-# Data Files
-# =========================
-
-# Keep input/output scaffolding, but ignore real contents
-input/*
-!input/lseg_workspace_sample/
-!input/reference/
-input/lseg_workspace_sample/*
-!input/lseg_workspace_sample/.gitkeep
-input/reference/*
-!input/reference/.gitkeep
-
-output/*
-!output/exports/
-!output/figures/
-!output/logs/
-!output/tables/
-output/exports/*
-!output/exports/001_prepare_input_data/
-!output/exports/002_regex_source_extraction/
-!output/exports/003_source_frequency_analysis/
-output/exports/001_prepare_input_data/*
-!output/exports/001_prepare_input_data/.gitkeep
-output/exports/002_regex_source_extraction/*
-!output/exports/002_regex_source_extraction/.gitkeep
-output/exports/003_source_frequency_analysis/*
-!output/exports/003_source_frequency_analysis/.gitkeep
-output/figures/*
-!output/figures/.gitkeep
-output/logs/*
-!output/logs/.gitkeep
-output/tables/*
-!output/tables/.gitkeep
-
-*.csv
-*.tsv
-*.xlsx
-*.parquet
-*.feather
-
-
-# =========================
-# Docker
-# =========================
-
-.dockerignore
-Dockerfile.local
-
-
-# =========================
-# Terraform
-# =========================
-
-.terraform/
-*.tfstate
-*.tfstate.*
-
-
-# =========================
-# Misc
-# =========================
-
-*.tmp
-*.temp
-*.bak
-*.orig
-*.swp
+# Input data: ignore real inputs, keep committed samples
+/input/*
+!/input/.gitkeep
+!/input/*sample*
