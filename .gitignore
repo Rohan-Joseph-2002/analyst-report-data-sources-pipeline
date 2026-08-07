@@ -16,6 +16,9 @@ __pycache__/
 # Tooling caches
 .ruff_cache/
 .pytest_cache/
+.agents/
+.claude/
+.devcontainer/
 
 # Generated outputs (keep the folder tree via .gitkeep)
 /output/**
