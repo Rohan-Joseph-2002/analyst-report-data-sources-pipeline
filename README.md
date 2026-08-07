@@ -3,7 +3,7 @@
 Standalone, regex-only pipeline that prepares cleaned analyst-report text, extracts the
 alternative data sources those reports cite, and summarizes how often each source is used.
 
-## Why this matters
+## Overview
 
 Knowing which alternative datasets (app, transaction, web, and similar signals) analysts lean
 on reveals where the market's attention is concentrated. This pipeline turns free-text reports
